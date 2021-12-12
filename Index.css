@@ -15,6 +15,9 @@ a{
 }
 .row{
     display: flex;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 80px;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
@@ -84,51 +87,6 @@ nav .navigation li a{
 nav li a:hover{
     color: rgb(9, 148, 241);
 } 
-header .hamburger
-{
-    display: none;
-    height: 36px;
-    width: 44px;
-    background-color: #ffffff;
-    border-radius: 4px;
-    cursor: pointer;
-
-    border: none;
-    position: relative;
-    margin-right: 15px;
-
-}
-header .hamburger .line1,.line2,.line3{
-    height: 5px;
-
-    border-radius: 2px;
-    background-color: #232323;
-    display: block;
-    position: relative;
-    margin: auto;
-    transition: all 0.3s ease;
-}
-header .hamburger .line1
-{
-    /* margin-top: 5px; */
-}
-header .hamburger .line2
-{
-    margin-top: 8px;
-}
-header .hamburger .line3
-{
-    margin-top: 8px;
-}
-header .hamburger.active .line2{
-    background: transparent;
-}
-header .hamburger.active .line1{
-    transform: rotate(45deg);
-}
-header .hamburger.active .line3{
-    transform: rotate(135deg);
-}
 
 
 /* Main banner */
@@ -136,9 +94,8 @@ header .hamburger.active .line3{
 {
     top: 5rem;
     position: relative;
-    /* width: 100vw; */
     height: 100vh;
-    background: url("https://source.unsplash.com/CCx6Fz_CmOI");
+    background: url("https://source.unsplash.com/CCx6Fz_CmOI/1200x800");
     background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -493,67 +450,94 @@ header .hamburger.active .line3{
     }
 }
 
-@media(max-width:600px)
+/* @media(max-width:600px)
 {
     .search{
         position: relative;
         width: calc(100% - 20px);
         height: 40px;
     }
+} */
+@media(max-width:900px)
+{
+    .search{
+        display: none;
+    }
+    .row{
+        padding-right: 60px;
+    }
 }
-@media(max-width:850px)
+@media(max-width:800px)
 {
 
     .search{
         display: none;
     }
-    header nav{
-        padding: 0;
-        max-height:0px;
-        height: 100vh;
-        width: 100%;
-        background-color: #252525;
-        visibility: hidden;
-        /* display: none; */
-
-        transition: all 0.1s ease;
-    }
-    header .navigation{
-        display: block;
-    }
-    header nav.open{
-
-        visibility: visible;
+    .row{
+        position: relative;
     }
     header .hamburger
     {
-        display: block;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: black url("images/menu.png");
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        border-radius: 6px;
+        z-index: 1000;
     }
+    header .hamburger.active{
+        background: black url("images/close.png");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     header .row nav{
         width: 100%;
         display: flex;
         justify-content: center;
         line-height: 4rem;
         padding: 0;
-        height: 100vh;
-        border-top: 4px solid rgb(173, 171, 171);
+        height: 100vh;   
+    }
+    header nav{
 
+        position: fixed;
+        background:rgb(14, 13, 13,0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.8s;
+        padding: 40px;
+        z-index: 10;
+        top: 0px;
+        right: -100%;
+        height: 100vh;
     }
-    header .row nav ul{
-        padding: 12px 15px 0;
-        margin-top: 12px;
+    header nav .navigation{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        transition: all 1s ease;
     }
-    header .row nav ul li{
-        display: block;
-        margin: 0;
-        width: 100%;
-      
+    header nav.open{
+        right: 0%;
     }
     header .row nav ul li a{
+        margin-top: 12px;
+        margin-right: 12px;
+        letter-spacing: 2px;
+        font-size: 2rem;
         color: rgb(255, 255, 255);
     }
     header .row nav ul li a:hover{
-        color: rgb(138, 18, 207);
+        color: rgb(194, 96, 250);
     }
     header .lgo{
         display: flex;
