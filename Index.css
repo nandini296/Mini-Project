@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&display=swap');
+
 *{
     
     padding: 0;
     box-sizing: border-box;
     /* overflow: hidden; */
+    font-family: 'Source Serif Pro', serif;
 }
 .container{
     margin: 0px 35px 0px 35px;
@@ -58,9 +61,11 @@ header{
     top: 20%;
     left: 10px;
     transform: translateX(12.5rem);
+ 
     color: white;
     margin: 0px;
     padding: 0px;
+
     padding-right: 10px;
     margin-left: -2rem;
 }
@@ -77,7 +82,6 @@ nav ul li{
 }
 
 nav .navigation li a{
-    
     font-size: 140%;
     color: black;
     font-weight: 600;
@@ -85,8 +89,8 @@ nav .navigation li a{
     transition: all 0s none;
 }
 nav li a:hover{
-    color: rgb(9, 148, 241);
-} 
+    color: rgb(162, 0, 255);
+}
 
 
 /* Main banner */
@@ -95,9 +99,11 @@ nav li a:hover{
     top: 5rem;
     position: relative;
     height: 100vh;
+    /*  */
     background: url("https://source.unsplash.com/CCx6Fz_CmOI/1200x800");
     background-position:center;
     background-size: cover;
+
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-size: 1rem;
@@ -107,16 +113,15 @@ nav li a:hover{
     letter-spacing: 3px;
 }
 .landing h2{
+    position: relative;
     overflow: hidden;
-    font-size: 5rem;
+    font-size: 4.5rem;
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top: 10%;
-    color: rgb(38, 3, 233);
-    margin: auto;
-    /* margin-left: 25%;
-    margin-right: 25%; */
+    top: 50%;
+    color: rgb(86, 56, 255);
+    height: 100%;
 }
 .landing .b1{
     position: relative;
@@ -295,6 +300,7 @@ nav li a:hover{
     box-shadow: rgba(50, 50, 93, 0.25) 4px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     position: relative;
     overflow: hidden;
+    padding-bottom: 2rem;
     margin-bottom: 3rem;
     cursor: pointer;
 }
@@ -441,6 +447,13 @@ nav li a:hover{
     /* bottom: 0; */
 }
 
+
+@media(max-width:700px)
+{
+    .landing h2{
+        font-size: 3rem;
+    }
+}
 @media(max-width:991px){
     header .navigation{
         display: flex;
@@ -450,14 +463,6 @@ nav li a:hover{
     }
 }
 
-/* @media(max-width:600px)
-{
-    .search{
-        position: relative;
-        width: calc(100% - 20px);
-        height: 40px;
-    }
-} */
 @media(max-width:900px)
 {
     .search{
@@ -466,10 +471,15 @@ nav li a:hover{
     .row{
         padding-right: 60px;
     }
+    .landing h2{
+        font-size: 3.5rem;
+    }
 }
 @media(max-width:800px)
 {
-
+    .landing h2{
+        font-size: 4rem;
+    }
     .search{
         display: none;
     }
@@ -550,3 +560,133 @@ nav li a:hover{
 
     
 }
+
+
+
+/* SLIDER */
+
+.topModels
+{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+ .crl
+{
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-height: auto;
+    overflow-y: hidden;
+    overflow-x: scroll !important;
+    transform: scroll(calc(var(--i,0)/var(--n)*-100%));
+    scroll-behavior: smooth;
+    margin-right: 40vw;
+}
+
+img{
+    width: 900px;
+}
+
+ .images::-webkit-scrollbar{
+    display: none;
+}
+
+.images .image{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.images .image img{
+    width: 300px;
+    height: 400px;
+    padding-right: 17px;
+    padding-top:10px ;
+    border-radius: 24px;
+    transition: 0.5s;
+}
+.images .image img:hover{
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+/* CONTACT */
+.maincontact{
+    width: 100%;
+    display: flex;
+
+    height: 100%;
+}
+.mainback
+{
+    background-image: url("https://source.unsplash.com/mD15zdyRPJ0");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 600px;
+}
+.contact
+{
+    position: relative;
+    background: linear-gradient(27deg,#c0daf7,#5881c1 50%,#cdd8ff 50%,#0073bd);
+    /* width: (100%-60rem); */
+    background: #36D1DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #69c0db, #0666a1);  /*Chrome 10-25, Safari 5.1-6*/
+background: linear-gradient(to right, #69c0db, #0666a1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 60rem;
+    text-align: center;   
+}
+.contact h1{
+    
+    padding-top: 30px;
+    letter-spacing: 2px;
+    font-size: 3.2rem;
+}
+.contact form > div{
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.contact form  div> label{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.contact form input,.contact form textarea
+{
+    border: none;
+    font-size: 1.5rem;
+    background: transparent;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+
+@media(max-width:700px)
+{
+    .mainback{
+        display: none;
+    }
+    .contact{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
