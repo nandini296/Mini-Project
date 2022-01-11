@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.maincontainer {
+  display: grid;
+  grid-template-areas:
+    "welcome welcome mypic mypic"
+    "about content content blank"
+    "pic pic more more";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  /* height: 140vh; */
+  margin: 0;
+}
+#welcome,
+#mypic,
+#about,
+#content,
+#blank,
+#pic,
+#more {
+  padding: 1.2em;
+  background: gold;
+}
+#welcome {
+  grid-area: welcome;
+  background-color: rgb(223, 143, 128);
+}
+#mypic {
+  grid-area: mypic;
+  background: url(https://source.unsplash.com/4nulm-JUYFo);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+#about {
+  grid-area: about;
+  position: relative;
+  background-color: rgb(245, 160, 174);
+}
+#content {
+  grid-area: content;
+  background-color: rgb(245, 245, 245);
+}
+#blank {
+  grid-area: blank;
+  background-color: rgb(139, 95, 241);
+}
+#pic {
+  background: url(https://source.unsplash.com/3TLl_97HNJo);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  grid-area: pic;
+}
+#more {
+  background-color: rgb(184, 81, 98);
+  grid-area: more;
+}
+
+#welcome p {
+  text-align: left;
+  padding: 40px;
+  font-size: 1.1em;
+  line-height: 26px;
+  letter-spacing: 1px;
+}
+
+#about h1 {
+  position: absolute;
+  width: 1fr;
+  top: 50%;
+  width: max-content;
+  left: 0%;
+  font-size: 3.5rem;
+  transform: rotate(-90deg);
+}
+
+#content p {
+  line-height: 25px;
+  letter-spacing: 1px;
+  padding: 40px;
+  font-size: 1.2em;
+}
+#more p {
+  line-height: 25px;
+  letter-spacing: 1px;
+  padding: 50px;
+  font-size: 1.2em;
+}
+
+#carouselExampleIndicators img {
+  height: 70vh;
+  /* width: ; */
+}
+.members {
+  align-items: center;
+  width: 60vw;
+  margin: auto;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+.memberContent h1 {
+  z-index: 399;
+  /* display: inline; */
+  padding: 2rem 0px 3rem 0px;
+
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+  /* background-color: black; */
+}
+.memberContent {
+  background-color: rgba(0, 0, 0, 0.555);
+  background: #c33764; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-bottom: 6rem;
+}
+.content1 img {
+  height: 100%;
+  width: 350px;
+}
+.content2 {
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  width: calc(100% - 350px);
+  background-color: rgb(139, 95, 241);
+  background: #ee9ca7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffdde1,
+    #ee9ca7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffdde1,
+    #ee9ca7
+    
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* height: 100%; */
+}
+.content2 p{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 200px; */
+  height: 100%;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+.linksContainer
+{
+  padding: 40px;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  background-color: #252424;
+}
+.linksContainer h4{
+  color: #ffffff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.social-links
+{
+  margin-top: 30px;
+  display: flex;
+}
+.linksContainer span
+{
+  padding: 20px;
+  border-radius: 2rem;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: black;
+  background-color: #c0c0c0;
+  transition: 0.3s;
+}
+.linksContainer a{
+  text-decoration: none;
+  /* text-decoration: overline; */
+}
+.linksContainer span:hover
+{
+  background-color: #f3f3f3;
+}
+.linksContainer span a{
+  color: black;
+  font-size: 1.5rem;
+}
+.linksContainer span:nth-child(1):hover a{
+  color:#0617aa;
+  font-weight: bolder;
+  /* font-size: 23rem; */
+}
+.linksContainer span:nth-child(2):hover a{
+  color:#4e5fff;
+  font-weight: bolder;
+  /* font-size: 23rem; */
+}
+.linksContainer span:nth-child(3):hover a{
+  color:#cf0d9f;
+  font-weight: bolder;
+  /* font-size: 23rem; */
+}
+.linksContainer span:nth-child(4):hover a{
+  color:#0416b6;
+  font-weight: bolder;
+  /* font-size: 23rem; */
+}
+
+
+
+
+
+/* https://unsplash.com/photos/4nulm-JUYFo */
+/* https://unsplash.com/photos/3TLl_97HNJo */
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 875px) {
+  .maincontainer {
+    grid-template-areas:
+    "welcome"
+    "mypic"
+    "about"
+    "content"
+    "blank"
+    "pic"
+    "more";
+    grid-template-rows:auto 1fr 1fr auto 0px 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  #welcome p, #content p,#more p{
+    padding: 10px;
+  }
+  #about h1 {
+    position: relative;
+    transform: rotate(0deg);
+  }
+  #about
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .content2{
+    width: 100vw;
+    padding: 10px;
+    line-height: inherit;
+  }
+  
+  
+  
+}
+
+@media(max-width:400px)
+{
+  .carousel-inner {
+    position: relative;
+    /* width: 100vw; */
+    left: -33%;
+    overflow: hidden;
+  }
+}
+@media (max-width:1100px)
+{
+  .content1{
+    width: 40%;
+  }
+  .content2{
+    width: 60%;
+  }
+  .content2 p{
+    padding: 10px;
+    /* margin-top: 0px; */
+    /* line-height: 10px; */
+  }
+}
+@media (max-width: 900px)
+{
+  .content2{
+    width: 100vw;
+    padding: 30px;
+    line-height: 28px;
+  }
+  .content1 img{
+    width: 100vw;
+  }
+  
+}
