@@ -29,6 +29,5 @@ ham.addEventListener("click",()=>{
     const nav = document.querySelector("nav");
     nav.classList.toggle("open");
     
-
 })
 >>>>>>> 94a052e215f0c6e59b5ae27d186cfe1c71498137
